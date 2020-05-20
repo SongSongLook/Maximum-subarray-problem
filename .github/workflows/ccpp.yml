@@ -1,27 +1,29 @@
 
-by SongSongLook.   
+//by SongSongLook.//   
 //程式開始//  
 
 #include <iostream>   
 using namespace std;  
-int kadanes(int array[],int length) {  
-   int highestMax = 0;  
-   int currentElementMax = 0;  
-   for(int i = 0; i < length; i++){  
-      currentElementMax =max(array[i],currentElementMax + array[i]) ;  
-      highestMax = max(highestMax,currentElementMax);  
+
+int kadane(int array[],int length) {  
+   int highestMax=0;  
+   int currentElementMax=0;  
+   for(int i=0;i<length;i++){  
+      currentElementMax =max(array[i],currentElementMax+array[i]) ;  
+      highestMax=max(highestMax,currentElementMax);  
    }  
    return highestMax;  
 }  
-int main() {  
-   cout << "Enter the array length: ";  
+int main(){  
+   cout<<"輸入數組長度:";  
    int l;  
-   cin >> l;  
+   cin>>l;  
    int arr[l];  
-   cout << "Enter the elements of array: ";  
-   for (int i = 0; i < l; i++) {  
-      cin >> arr[i];  
+   cout<<"輸入數組裡的數值:";  
+   for(int i=0;i<l;i++){  
+      cin>>arr[i];  
    }  
-   cout << "The Maximum Sum is: "<<kadanes(arr,l) << endl;  
+   cout<<"最大子序列和:"<<kadane(arr,l)<<endl;  
    return 0;  
 }  
+//by C++//
