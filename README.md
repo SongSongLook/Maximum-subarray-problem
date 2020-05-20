@@ -12,7 +12,8 @@
 
 by SongSongLook.   
 //程式開始//  
-#include<iostream>   
+
+#include <iostream>   
 using namespace std;  
 int kadanes(int array[],int length) {  
    int highestMax = 0;  
