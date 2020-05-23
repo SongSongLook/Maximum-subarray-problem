@@ -1,8 +1,9 @@
 
 #include <iostream>   
 using namespace std;  
-
-int kadane(int array[],int length) {  
+//create gcd
+int kadane(int array[],int length) 
+{  
    int highestMax=0;  
    int currentElementMax=0;  
    for(int i=0;i<length;i++){  
@@ -11,6 +12,7 @@ int kadane(int array[],int length) {
    }  
    return highestMax;  
 }  
+//main code
 int main(){  
    cout<<"輸入數組長度:";  
    int l;  
